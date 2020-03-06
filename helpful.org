@@ -1,0 +1,5 @@
+#+TITLE: helpful tips
+* postgres
+The port 5432 is blocked if a local postgresql instance is running on it.
+To stop this port run `systemctl stop postgresql.service`
+To view status of psql run `systemctl status postgresql.service`
