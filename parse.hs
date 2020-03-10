@@ -26,7 +26,7 @@ chunk text = uncurry (clean allPrefixes)
         allPrefixes = inputPrefixes ++ ["$.. ==>"]
 
 hasPrefix :: [Text] -> Text -> Bool
-hasPrefix prefixes text = foldl (\t prefix -> t && T.isPrefixOf prefix text) True prefixes
+hasPrefix prefixes text = foldl (\t prefix -> t || T.isPrefixOf prefix text) False prefixes
 
 clean :: [Text] -- separators
       -> [Text] -> [Text] -- separated text
