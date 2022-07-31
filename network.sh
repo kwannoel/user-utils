@@ -16,7 +16,7 @@ read -p "Enter your identity: " wifi_identity
 read -p "Enter your password: " -s wifi_password
 
 nmcli connection add \
- type wifi con-name $wifi_name ifname wlo1 ssid $wifi_name -- \
+ type wifi con-name $wifi_name ifname wlo1 ssid $wifi_name \
  wifi-sec.key-mgmt wpa-eap \
  802-1x.eap ttls \
  802-1x.phase2-auth pap \
